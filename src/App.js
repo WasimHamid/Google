@@ -5,10 +5,14 @@ import ReactGA from "react-ga";
 
 function initializeReactGA() {
   ReactGA.initialize("UA-123791717-1");
-  ReactGA.pageview("/homepage");
+  ReactGA.pageview("/");
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    initializeReactGA();
+  }
   render() {
     return (
       <div className="App">
